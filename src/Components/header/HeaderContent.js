@@ -1,8 +1,4 @@
 import { Link } from "react-router-dom";
-import "./Header.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-
 export default function HeaderContent() {
   return (
     <div className="header-content-container">
@@ -14,18 +10,17 @@ export default function HeaderContent() {
         <h2>Mirko Duric</h2>
         <h4>I'm a Front End Web Developer</h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
-          dignissimos neque quidem accusamus, ipsa non obcaecati, veniam
-          inventore reiciendis eligendi ea? Quas vitae dolorum aut veritatis
-          ipsum fugit velit magni sed assumenda iure temporibus illum commodi
-          quis dolor consequatur aliquam obcaecati libero sapiente sequi
-          corrupti optio, laudantium voluptas. Modi, neque!
+          Welcome to my portfolio! <br />
+          As a junior front-end developer, I'm eager to showcase my skills and
+          passion for creating beautiful, user-friendly websites. In this
+          portfolio, you'll find small-scale projects and more complex web
+          applications, and each project reflects my knowledge and passion to
+          learn and improve my skills.
         </p>
         <Link to="/aboutme" className="btn">
           About Me
         </Link>
       </div>
-      <FontAwesomeIcon icon="fa-square-instagram" />
     </div>
   );
 }

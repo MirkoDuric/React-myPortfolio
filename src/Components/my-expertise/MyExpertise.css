@@ -1,0 +1,56 @@
+.experties-container {
+  background-color: white;
+}
+.myexperties {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 30px;
+}
+
+.experties {
+  background: #f5f5f5;
+  color: #001427;
+  border-radius: 5%;
+  padding: 40px 20px;
+  max-width: 340px;
+  margin: 20px;
+  transition: 0.5s;
+  text-align: center;
+}
+.experties:hover {
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 55px;
+}
+.html {
+  color: red;
+}
+.css {
+  color: #0860b2;
+}
+.js {
+  color: gold;
+}
+.react {
+  font-weight: bolder;
+  color: #001427;
+}
+.db {
+  color: #02284b;
+}
+.node {
+  color: green;
+}
+.experties h3 {
+  color: #001427;
+}
+.experties p {
+  color: #001427;
+}

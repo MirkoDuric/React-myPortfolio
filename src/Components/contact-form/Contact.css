@@ -1,0 +1,51 @@
+.contact {
+  background-color: #001427;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100vh;
+}
+.contact .contactForm {
+  position: relative;
+  width: 75%;
+  margin-top: 20px;
+  height: 100vh;
+}
+.contact .contactForm .row {
+  width: 100%;
+  display: flex;
+}
+.contact .contactForm .row .col50 {
+  width: 50%;
+  margin: 10px;
+}
+.contact .contactForm .row .col100 {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+.contact .contactForm .row input,
+.contact .contactForm .row textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  resize: none;
+}
+.contact .contactForm .row textarea {
+  height: 100%;
+}
+.contact .contactForm .row input[type="submit"] {
+  background: #00bcd4;
+  color: #fff;
+  padding: 10px 30px;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+}

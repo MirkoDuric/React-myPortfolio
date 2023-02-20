@@ -3,20 +3,29 @@
   width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
 }
-.header-img {
+.header-img-container {
   position: absolute;
+  display: flex;
   top: 0;
   left: 0;
-  width: 500px;
+  width: 40%;
   height: 100%;
+}
+.header-img {
+  width: 100%;
+  height: auto;
+  background: url(../img/myportrait.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .header-content-container {
   position: absolute;
   top: 0;
-  left: 500px;
-  width: calc(100% - 500px);
+  left: 40%;
+  width: 60%;
+  max-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,5 +74,7 @@ p {
   letter-spacing: 2px;
 }
 .btn:hover {
+  cursor: pointer;
   background-color: #bf0603;
+  transition: 0.3s;
 }
