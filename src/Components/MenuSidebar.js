@@ -35,7 +35,7 @@ export default function MenuSidebar() {
             to="/contactform"
             style={({ isActive }) => (isActive ? activeLinkStyle : undefined)}
           >
-            CONTACT FORM
+            CONTACT
           </NavLink>
         </li>
       </ul>
