@@ -3,6 +3,7 @@
   width: 100%;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
 }
 .header-img-container {
   position: absolute;
@@ -38,43 +39,45 @@
   font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background: #8d0801;
+  background: #00bcd4;
   color: #fff;
   padding: 5px;
 }
-h4 {
+.header-content-container h4 {
   font-size: 1.5em;
   color: #001427;
   font-weight: 300;
   padding-top: 50px;
 }
-span {
-  color: #8d0801;
+.header-content-container span {
+  color: #00bcd4;
   font-size: 1.5em;
   font-weight: 700;
 }
-h2 {
+.header-content-container h2 {
   font-size: 3em;
   color: #001427;
   line-height: 1em;
 }
-p {
+.header-content-container p {
   font-size: 1.1 em;
   margin: 20px 0;
   font-weight: 300;
   color: #001427;
 }
 .btn {
-  background: #8d0801;
+  background: #00bcd4;
+  position: relative;
   color: #fff;
   padding: 10px 30px;
   display: inline-block;
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 2px;
+  transition: 0.3s;
 }
 .btn:hover {
   cursor: pointer;
-  background-color: #bf0603;
-  transition: 0.3s;
+  background-color: #00bcd4;
+  box-shadow: 0 0 10px #00bcd4, 0 0 40px #00bcd4, 0 0 80px #00bcd4;
 }
