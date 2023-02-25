@@ -1,21 +1,18 @@
 import "./Projects.css";
-import myImg from "../img/meandthedog.jpg";
 import { Link } from "react-router-dom";
-export default function ProjectCard() {
+export default function ProjectCard(props) {
   return (
     <div className="card">
       <div className="circle"></div>
       <div className="content">
-        <h3>Project Name</h3>
-        <p>
-          Project description(ada dsadaf fasdfgsdgasgdg afsgasdgas sadfas fsfsa
-          dsf asdf sadf asdfa sdaf sad d asdfasdf asdfsa dfasdfds sadfa fasd a)
-        </p>
+        <h3>{props.projectName}</h3>
+        <hr />
+        <p>{props.projectDescription}</p>
         <Link to={"/"} className="project-btn">
-          to project
+          Take a look
         </Link>
       </div>
-      <img src={myImg}></img>
+      <img src={props.projectImg}></img>
     </div>
   );
 }

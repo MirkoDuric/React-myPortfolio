@@ -22,7 +22,7 @@ export default function MenuSidebar() {
             to="/aboutme"
             style={({ isActive }) => (isActive ? activeLinkStyle : undefined)}
           >
-            ABOUT ME
+            MY STORY
           </NavLink>
         </li>
         <li>
@@ -38,7 +38,7 @@ export default function MenuSidebar() {
             to="/myprojects"
             style={({ isActive }) => (isActive ? activeLinkStyle : undefined)}
           >
-            MY PROJECTS
+            PROJECTS
           </NavLink>
         </li>
         <li>

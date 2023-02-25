@@ -39,8 +39,8 @@ export default function ContactForm() {
             ></textarea>
           </div>
         </div>
-        <div class="row">
-          <div class="col100">
+        <div className="row">
+          <div className="col100">
             <input type="submit" value="Send" />
           </div>
         </div>

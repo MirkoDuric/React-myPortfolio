@@ -1,83 +1,170 @@
-.header-container {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+@media (min-width: 200px) and (min-height: 240px) {
+  .header-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-img-container {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .header-img {
+    width: 100%;
+    height: auto;
+    background: url(../img/myportrait.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .header-content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+  }
+  .logoText {
+    position: absolute;
+    top: 40px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #00bcd4;
+    color: #fff;
+    padding: 5px;
+  }
+  .header-content-container h4 {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 300;
+    padding-bottom: 10px;
+  }
+  .header-content-container span {
+    color: #00bcd4;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  .header-content-container h2 {
+    font-size: 3em;
+    color: #fff;
+    line-height: 1em;
+  }
+  .header-content-container p {
+    display: none;
+  }
+  .btn {
+    background: #00bcd4;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1.7px;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    cursor: pointer;
+    background-color: #00bcd4;
+    box-shadow: 0 0 10px #00bcd4, 0 0 40px #00bcd4, 0 0 80px #00bcd4;
+  }
 }
-.header-img-container {
-  position: absolute;
-  display: flex;
-  top: 0;
-  left: 0;
-  width: 40%;
-  height: 100%;
-}
-.header-img {
-  width: 100%;
-  height: auto;
-  background: url(../img/myportrait.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.header-content-container {
-  position: absolute;
-  top: 0;
-  left: 40%;
-  width: 60%;
-  max-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px;
-}
-.logoText {
-  position: absolute;
-  top: 40px;
-  left: 100px;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background: #00bcd4;
-  color: #fff;
-  padding: 5px;
-}
-.header-content-container h4 {
-  font-size: 1.5em;
-  color: #001427;
-  font-weight: 300;
-  padding-top: 50px;
-}
-.header-content-container span {
-  color: #00bcd4;
-  font-size: 1.5em;
-  font-weight: 700;
-}
-.header-content-container h2 {
-  font-size: 3em;
-  color: #001427;
-  line-height: 1em;
-}
-.header-content-container p {
-  font-size: 1.1 em;
-  margin: 20px 0;
-  font-weight: 300;
-  color: #001427;
-}
-.btn {
-  background: #00bcd4;
-  position: relative;
-  color: #fff;
-  padding: 10px 30px;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 2px;
-  transition: 0.3s;
-}
-.btn:hover {
-  cursor: pointer;
-  background-color: #00bcd4;
-  box-shadow: 0 0 10px #00bcd4, 0 0 40px #00bcd4, 0 0 80px #00bcd4;
+
+@media (min-width: 1024px) and (min-height: 560px) {
+  .header-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-img-container {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+  }
+  .header-img {
+    width: 100%;
+    height: auto;
+    background: url(../img/myportrait.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .header-content-container {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 60%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+  }
+  .logoText {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #00bcd4;
+    color: #fff;
+    padding: 5px;
+  }
+  .header-content-container h4 {
+    font-size: 1.5em;
+    color: #001427;
+    font-weight: 300;
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+  .header-content-container span {
+    color: #00bcd4;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  .header-content-container h2 {
+    font-size: 3em;
+    color: #001427;
+    line-height: 1em;
+  }
+  .header-content-container p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 300;
+    color: #001427;
+    display: block;
+    opacity: 0.7;
+  }
+  .btn {
+    background: #00bcd4;
+    position: relative;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    cursor: pointer;
+    background-color: #00bcd4;
+    box-shadow: 0 0 10px #00bcd4, 0 0 40px #00bcd4, 0 0 80px #00bcd4;
+  }
 }

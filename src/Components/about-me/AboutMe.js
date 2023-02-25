@@ -22,6 +22,7 @@ export default function AboutMe() {
         <div className="article-container">
           <article>
             <h3>Introduction</h3>
+            <hr className="hr-section-title-aboutme" />
             <p>
               Hello and welcome to my profile! My name is Mirko Duric, and I'm a
               26-year-old Web Developer, originaly from Bosnia and Herzegovina
@@ -33,6 +34,7 @@ export default function AboutMe() {
           </article>
           <article>
             <h3>Professional Background</h3>
+            <hr className="hr-title" />
             <p>
               I started my professional career as a medical worker
               (Krankenpfleger) at the University Hospital in Heidelberg, Germany
@@ -48,6 +50,7 @@ export default function AboutMe() {
           </article>
           <article>
             <h3>Skills and Hobbies</h3>
+            <hr className="hr-title" />
             <p>
               As someone who enjoys being challenged and seeking new
               experiences, I decided to pursue a career in Web Development.
@@ -67,6 +70,7 @@ export default function AboutMe() {
           </article>
           <article>
             <h3>Conclusion</h3>
+            <hr className="hr-title" />
             <p>
               Thank you for taking the time to read my profile. As a Web
               Developer, I am constantly seeking out new challenges and
