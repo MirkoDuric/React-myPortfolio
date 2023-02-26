@@ -11,7 +11,7 @@ export default function MenuSidebar() {
       <ul class="menu">
         <li>
           <NavLink
-            to="/"
+            to="/React-myPortfolio"
             style={({ isActive }) => (isActive ? activeLinkStyle : undefined)}
           >
             HOME

@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Header />} />
+        <Route exact path="/React-myPortfolio" element={<Header />} />
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/skills" element={<MyExpertise />} />
         <Route path="/contactform" element={<ContactForm />} />
