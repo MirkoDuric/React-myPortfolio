@@ -104,6 +104,9 @@
     display: block;
     opacity: 0.7;
   }
+  .header-content-container h2 {
+    color: #001427;
+  }
   .btn {
     padding: 10px 30px;
     transition: 0.3s;
