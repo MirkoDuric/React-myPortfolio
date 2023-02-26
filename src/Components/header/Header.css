@@ -81,6 +81,36 @@
 }
 
 @media (min-width: 1024px) and (min-height: 560px) {
+  .header-img-container {
+    width: 40%;
+    height: 100%;
+  }
+  .header-content-container {
+    left: 40%;
+  }
+  .logoText {
+    left: 100px;
+  }
+  .header-content-container h4 {
+    color: #001427;
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+  .header-content-container p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 300;
+    color: #001427;
+    display: block;
+    opacity: 0.7;
+  }
+  .btn {
+    padding: 10px 30px;
+    transition: 0.3s;
+  }
+}
+
+/* @media (min-width: 1024px) and (min-height: 560px) {
   .header-container {
     position: relative;
     width: 100%;
@@ -167,4 +197,4 @@
     background-color: #00bcd4;
     box-shadow: 0 0 10px #00bcd4, 0 0 40px #00bcd4, 0 0 80px #00bcd4;
   }
-}
+} */
