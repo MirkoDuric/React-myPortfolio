@@ -43,18 +43,33 @@ export default function ContactForm() {
               type="text"
               name="First_name"
               placeholder="First Name"
+              required
             ></input>
           </div>
           <div className="col50">
-            <input type="text" name="Last_name" placeholder="Last Name"></input>
+            <input
+              type="text"
+              name="Last_name"
+              placeholder="Last Name"
+              required
+            ></input>
           </div>
         </div>
         <div className="row">
           <div className="col50">
-            <input type="text" name="email" placeholder="Email"></input>
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              required
+            ></input>
           </div>
           <div className="col50">
-            <input type="text" name="phone" placeholder="Phone"></input>
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone (optional)"
+            ></input>
           </div>
         </div>
         <div className="row">
@@ -66,6 +81,7 @@ export default function ContactForm() {
               cols="30"
               rows="10"
               placeholder="Message"
+              required
             ></textarea>
           </div>
         </div>

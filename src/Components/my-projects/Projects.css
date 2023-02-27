@@ -133,7 +133,7 @@ hr {
   .card .content {
     width: 100%;
     left: 0;
-    padding: 30px;
+    padding: 35px;
   }
   .card:hover img {
     top: 73%;
@@ -150,5 +150,11 @@ hr {
   }
   .projects-title p {
     display: none;
+  }
+}
+@media (max-width: 347px) {
+  .card:hover img {
+    top: 75%;
+    height: 300px;
   }
 }
