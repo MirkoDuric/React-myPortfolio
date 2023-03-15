@@ -29,7 +29,6 @@
 .toggle:hover {
   background-color: #00bcd4;
   transition: 0.2s;
-  box-shadow: 0 0 10px #00bcd4, 0 0 40px #00bcd4, 0 0 80px #00bcd4;
 }
 .sidebar {
   position: absolute;
@@ -69,6 +68,4 @@
 .sidebar ul li a:hover {
   cursor: pointer;
   color: #00bcd4;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #00bcd4, 0 0 40px #00bcd4, 0 0 80px #00bcd4;
 }

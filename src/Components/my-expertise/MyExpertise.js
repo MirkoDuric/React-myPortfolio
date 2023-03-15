@@ -136,6 +136,7 @@ export default function MyExpertise() {
         <div className="skills-container">
           <div className="skill-title">
             <h2>My Skills</h2>
+            <hr />
           </div>
           <Swiper
             effect={"coverflow"}
@@ -147,7 +148,7 @@ export default function MyExpertise() {
               stretch: 0,
               depth: 100,
               modifier: 1,
-              slideShadows: true,
+              slideShadows: false,
             }}
             pagination={true}
             modules={[EffectCoverflow, Pagination]}

@@ -1,10 +1,8 @@
 import { NavLink } from "react-router-dom";
 export default function MenuSidebar() {
   const activeLinkStyle = {
-    color: "#001427",
-    background: "#00bcd4",
-    boxShadow: "0 0 10px #00bcd4, 0 0 40px #00bcd4, 0 0 80px #00bcd4",
-    borderRadius: "5px",
+    color: "#00bcd4",
+    borderBottom: "1px solid #00bcd4",
   };
   return (
     <div class="sidebar">
