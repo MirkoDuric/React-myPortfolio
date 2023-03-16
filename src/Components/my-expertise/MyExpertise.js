@@ -7,24 +7,22 @@ import {
   FaDatabase,
 } from "react-icons/fa";
 import React, { useRef, useState } from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
 import "./MyExpertise.css";
-
 import { EffectCoverflow, Pagination } from "swiper";
 import MenuButton from "../MenuButton";
 import MenuSidebar from "../MenuSidebar";
 import "./MyExpertise.css";
+import useWindowsResize from "../../useWindowResize";
+
 export default function MyExpertise() {
   const [active, setActive] = useState(false);
-  //   const [slideId, setSlideId] = useState(0);
-  //   const [nextSlideId, setNextSlideId] = useState(1);
-  //   const [previousSlideId, setPreviousSlideId] = useState(5);
+  const { width, height } = useWindowsResize();
+  const [currentSlideId, setCurrentSlideId] = useState(0);
+
   const skills = [
     {
       id: 0,
@@ -99,37 +97,12 @@ export default function MyExpertise() {
       Node.js frameworks, such as Express.js.`,
     },
   ];
-  //   const prevSlide = skills[previousSlideId];
-  //   const displayedSlide = skills[slideId];
-  //   const nextSlide = skills[nextSlideId];
-  //   function slideShow() {
-  //     if (slideId === 0) {
-  //       setPreviousSlideId(0);
-  //       setSlideId(1);
-  //       setNextSlideId(2);
-  //     } else if (slideId === 1) {
-  //       setPreviousSlideId(1);
-  //       setSlideId(2);
-  //       setNextSlideId(3);
-  //     } else if (slideId === 2) {
-  //       setPreviousSlideId(2);
-  //       setSlideId(3);
-  //       setNextSlideId(4);
-  //     } else if (slideId === 3) {
-  //       setPreviousSlideId(3);
-  //       setSlideId(4);
-  //       setNextSlideId(5);
-  //     } else if (slideId === 4) {
-  //       setPreviousSlideId(4);
-  //       setSlideId(5);
-  //       setNextSlideId(0);
-  //     } else if (slideId === 5) {
-  //       setPreviousSlideId(5);
-  //       setSlideId(0);
-  //       setNextSlideId(1);
-  //     }
-  //   }
-
+  function handleNextClick() {
+    setCurrentSlideId(Math.min(currentSlideId + 1, 5));
+  }
+  function handlePrevClick() {
+    setCurrentSlideId(Math.max(currentSlideId - 1, 0));
+  }
   return (
     <div className="experties-container">
       <section className="myexperties">
@@ -138,58 +111,44 @@ export default function MyExpertise() {
             <h2>My Skills</h2>
             <hr />
           </div>
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={"auto"}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: false,
-            }}
-            pagination={true}
-            modules={[EffectCoverflow, Pagination]}
-            className="mySwiper"
-          >
-            {skills.map((skill) => {
-              return (
-                <SwiperSlide>
-                  <article>
-                    {skill.icon}
-                    <p>{skill.description}</p>
-                  </article>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-          {/* <button className="slide-nav" onClick={() => slideShow()}>
-              &#8678;
-            </button>
-            <div className="skill-cards">
-              <article id={prevSlide.id} className="experties previous-skill ">
-                {prevSlide.icon}
-                <p>{prevSlide.description}</p>
+          {width > 1024 ? (
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={"auto"}
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
+              }}
+              pagination={true}
+              modules={[EffectCoverflow, Pagination]}
+              className="mySwiper"
+            >
+              {skills.map((skill) => {
+                return (
+                  <SwiperSlide>
+                    <article>
+                      {skill.icon}
+                      <p>{skill.description}</p>
+                    </article>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          ) : (
+            <div className="mySlider">
+              <article className="slide">
+                {skills[currentSlideId].icon}
+                <p>{skills[currentSlideId].description}</p>
               </article>
-
-              <article
-                id={displayedSlide.id}
-                className="experties current-skill"
-              >
-                {displayedSlide.icon}
-                <p>{displayedSlide.description}</p>
-              </article>
-
-              <article id={nextSlide.id} className="experties next-skill">
-                {nextSlide.icon}
-                <p>{nextSlide.description}</p>
-              </article>
+              <button onClick={() => handlePrevClick()}>&#8678;</button>
+              <button onClick={() => handleNextClick()}>&#8680;</button>
             </div>
-            <button className="slide-nav" onClick={() => slideShow()}>
-              &#8680;
-            </button> */}
+          )}
         </div>
       </section>
       <MenuButton
