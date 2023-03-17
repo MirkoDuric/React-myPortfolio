@@ -105,11 +105,11 @@ export default function MyExpertise() {
   }
   return (
     <div className="experties-container">
-      <section className="myexperties">
+      <section>
         <div className="skills-container">
           <div className="skill-title">
             <h2>My Skills</h2>
-            <hr />
+            <hr className="hr-section-title-skills" />
           </div>
           {width > 1024 ? (
             <Swiper
@@ -145,8 +145,10 @@ export default function MyExpertise() {
                 {skills[currentSlideId].icon}
                 <p>{skills[currentSlideId].description}</p>
               </article>
-              <button onClick={() => handlePrevClick()}>&#8678;</button>
-              <button onClick={() => handleNextClick()}>&#8680;</button>
+              <div className="button-container">
+                <a onClick={() => handlePrevClick()}>&#8678;</a>
+                <a onClick={() => handleNextClick()}>&#8680;</a>
+              </div>
             </div>
           )}
         </div>
