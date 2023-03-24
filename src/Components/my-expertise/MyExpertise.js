@@ -35,7 +35,7 @@ export default function MyExpertise() {
   other front-end and back-end technologies.`,
     },
     {
-      id: 1,
+      id: 0,
       icon: <FaCss3 className="icon css" />,
       description: `I have a solid understanding of CSS and its capabilities in styling
       and layout of web pages. I am familiar with CSS syntax, properties,
@@ -47,7 +47,7 @@ export default function MyExpertise() {
       Bootstrap and MUI.`,
     },
     {
-      id: 2,
+      id: 1,
       icon: <FaJs className="icon js" />,
       description: `I have a proficient knowledge of JavaScript and its capabilities in
       creating dynamic and interactive web pages. I am familiar with
@@ -59,7 +59,7 @@ export default function MyExpertise() {
       practices in the language.`,
     },
     {
-      id: 3,
+      id: 2,
       icon: <FaReact className="icon react" />,
       description: `I have a solid understanding of React and its capabilities in
       building dynamic and interactive user interfaces. I am familiar with
@@ -71,7 +71,7 @@ export default function MyExpertise() {
       making asynchronous requests using Axios.`,
     },
     {
-      id: 4,
+      id: 3,
       icon: <FaDatabase className="icon db" />,
       description: `I have a foundational understanding of both SQL and NoSQL and their
       roles in managing data in web development. I am familiar with
@@ -85,7 +85,7 @@ export default function MyExpertise() {
       expanding my knowledge.`,
     },
     {
-      id: 5,
+      id: 4,
       icon: <FaNodeJs className="icon node" />,
       description: `I have a basic understanding of Node.js and its capabilities in
       building scalable and efficient web applications. I am familiar with
@@ -105,54 +105,66 @@ export default function MyExpertise() {
   }
   return (
     <div className="experties-container">
-      <section>
-        <div className="skills-container">
-          <div className="skill-title">
-            <h2>My Skills</h2>
-            <hr className="hr-section-title-skills" />
-          </div>
-          {width > 1024 ? (
-            <Swiper
-              effect={"coverflow"}
-              grabCursor={true}
-              centeredSlides={true}
-              slidesPerView={"auto"}
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: false,
-              }}
-              pagination={true}
-              modules={[EffectCoverflow, Pagination]}
-              className="mySwiper"
+      <div className="skills-container">
+        <div className="skill-title">
+          <h2>My Skills</h2>
+          <hr className="hr-section-title-skills" />
+        </div>
+        {width > 1024 ? (
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            pagination={true}
+            modules={[EffectCoverflow, Pagination]}
+            className="mySwiper"
+          >
+            {skills.map((skill) => {
+              return (
+                <SwiperSlide>
+                  <article>
+                    {skill.icon}
+                    <p>{skill.description}</p>
+                  </article>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        ) : (
+          <div className="skill-carousel">
+            <div
+              className="carousel-card-container"
+              style={{ transform: `translateX(${currentSlideId * -60}vw)` }}
             >
               {skills.map((skill) => {
                 return (
-                  <SwiperSlide>
-                    <article>
-                      {skill.icon}
-                      <p>{skill.description}</p>
-                    </article>
-                  </SwiperSlide>
+                  <div className="skill-card">
+                    {skill.icon}
+                    <p>{skill.description}</p>
+                  </div>
                 );
               })}
-            </Swiper>
-          ) : (
-            <div className="mySlider">
-              <article className="slide">
-                {skills[currentSlideId].icon}
-                <p>{skills[currentSlideId].description}</p>
-              </article>
-              <div className="button-container">
-                <a onClick={() => handlePrevClick()}>&#8678;</a>
-                <a onClick={() => handleNextClick()}>&#8680;</a>
-              </div>
             </div>
-          )}
-        </div>
-      </section>
+            <div className="buttons-container">
+              <button onClick={handlePrevClick} className="btn" id="left">
+                Prev
+              </button>
+              <button onClick={handleNextClick} className="btn" id="right">
+                Next
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+
       <MenuButton
         activeTggle={(e) => {
           return setActive(!active), e.target.classList.toggle("active");

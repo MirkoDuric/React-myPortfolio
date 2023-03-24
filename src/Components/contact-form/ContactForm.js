@@ -33,9 +33,6 @@ export default function ContactForm() {
 
   return (
     <section className="contact">
-      <div className="contact-title">
-        <h2>Contact Me</h2>
-      </div>
       <form ref={form} onSubmit={sendEmail} className="contactForm">
         <div className="row">
           <div className="col50">
