@@ -1,88 +1,113 @@
 @media (min-width: 200px) and (min-height: 240px) {
   .aboutme-container {
-    height: 100vh;
-  }
-  .stories-container {
-    height: 100%;
-    width: 100%;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  .article-carousel {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    height: 85%;
-    width: 75%;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
     overflow: hidden;
+    margin: 0;
   }
-  .article-card-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  .article-card {
+  .cards-container {
     display: flex;
     flex-direction: column;
-    width: 75vw;
-    height: 80vh;
-    align-items: center;
-    object-fit: cover;
-    text-align: center;
-    padding: 5%;
+    width: 80vw;
+    height: 90vh;
   }
-  .article-card p {
-    width: inherit;
-    height: inherit;
-    padding: 5%;
+  .panel {
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 14vh;
+    color: black;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    transition: 0.7s ease-in;
+    overflow-y: hidden;
+  }
+  .panel.active {
+    height: 80vh;
+    padding: 5px;
+    border-radius: 5%;
+  }
+  .panel.active .p-scroll {
+    overflow-y: scroll;
+    padding: 5px;
+    height: 80%;
     overflow-y: scroll;
   }
-  .aboutme-buttons-container {
-    display: flex;
-    justify-content: space-between;
-    height: 5vh;
-    width: 100%;
-  }
-  .aboutme-buttons-container .btn {
-    background-color: #001427;
-    color: #fff;
-    border: none;
-    padding: 5px;
-    width: 49.5%;
-  }
-  .aboutme-buttons-container .btn:hover {
-    cursor: pointer;
-    opacity: 0.9;
-    background-color: #00bcd4;
-  }
-  .aboutme-buttons-container .btn:focus {
-    outline: none;
+  .panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
   }
   .hr-section-title-aboutme {
-    padding: 0;
-    width: 25%;
-    height: 2px;
-    border: #00bcd4;
-    background-color: #00bcd4;
-    border-radius: 5px;
-    margin: auto;
-    margin-bottom: 5%;
+    margin-bottom: 50px;
+  }
+  .intro-about-me {
+    font-size: 1px;
+    width: 70%;
+    margin-right: 20%;
   }
 }
-@media (min-width: 1024px) and (min-height: 560px) {
-  .article-container {
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 60%;
-    height: 100vh;
+@media (min-width: 420px) {
+  .hr-section-title-aboutme {
+    margin-bottom: 20px;
   }
-  .article-container article {
-    width: 60%;
-    min-height: 50%;
+  .panel.active {
+    height: 80vh;
+    padding: 5px;
+    border-radius: 5%;
+    font-size: 12px;
   }
-  .article-container article:nth-child(even) {
-    align-self: flex-end;
+  .panel.active.p-scroll {
+    overflow-y: scroll;
+    padding: 5px;
+    height: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutme-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 90vh;
+  }
+  .panel h3 {
+    color: black;
+    font-size: 10px;
+    transition: flex 0.7s ease-in;
+  }
+  .panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+  }
+  .panel.active {
+    flex: 5;
+    color: black;
+  }
+  .panel.active h3 {
+    opacity: 1;
+    font-size: 24px;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+  .intro-about-me {
+    margin-top: 15px;
+    margin-right: 50%;
+    height: 20vh;
+    width: 40%;
+    font-size: 12px;
   }
 }
