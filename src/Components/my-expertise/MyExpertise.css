@@ -34,11 +34,13 @@
 
 .experties p {
   color: #001427;
+  font-weight: 300;
 }
 
 .skill-title h2 {
   color: #001427;
   font-size: 25px;
+  font-weight: 500;
 }
 .hr-section-title-skills {
   padding: 0;
@@ -77,6 +79,7 @@
   height: inherit;
   padding: 5%;
   overflow-y: scroll;
+  font-weight: 300;
 }
 .buttons-container {
   display: flex;
@@ -113,6 +116,7 @@
   .swiper-slide {
     background-color: #fff;
     color: #001427;
+    font-weight: 300;
     text-align: center;
     background-position: center;
     background-size: cover;
@@ -122,7 +126,7 @@
     border-radius: 0px;
     filter: blur(1px);
     font-size: 18px;
-    border: 1px rgba(0, 0, 0, 0.3) solid;
+    border: 1px #00bcd4 solid;
   }
   .swiper-slide-active {
     filter: blur(0);
@@ -130,5 +134,6 @@
   .swiper-slide p {
     padding: 10px;
     font-size: 14px;
+    overflow-y: scroll;
   }
 }

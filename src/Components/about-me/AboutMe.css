@@ -25,19 +25,24 @@
     position: relative;
     transition: 0.7s ease-in;
     overflow-y: hidden;
+    font-weight: 300;
+  }
+  .panel h3 {
+    font-weight: 500;
   }
   .panel.active {
     height: 80vh;
     padding: 5px;
     border-radius: 5%;
+    font-size: 14px;
   }
   .panel.active .p-scroll {
-    overflow-y: scroll;
+    overflow: scroll;
     padding: 5px;
-    height: 80%;
-    overflow-y: scroll;
+    height: 70%;
   }
   .panel.active h3 {
+    font-size: 17px;
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
   }
@@ -45,9 +50,15 @@
     margin-bottom: 50px;
   }
   .intro-about-me {
-    font-size: 1px;
+    font-size: 13px;
     width: 70%;
     margin-right: 20%;
+    font-weight: 300;
+  }
+  .hello-span {
+    font-size: 17px;
+    color: #00bcd4;
+    font-weight: 500;
   }
 }
 @media (min-width: 420px) {
@@ -97,6 +108,7 @@
   .panel.active {
     flex: 5;
     color: black;
+    font-size: 15px;
   }
   .panel.active h3 {
     opacity: 1;
@@ -107,7 +119,12 @@
     margin-top: 15px;
     margin-right: 50%;
     height: 20vh;
-    width: 40%;
-    font-size: 12px;
+    width: 45%;
+    font-size: 15px;
+  }
+  .hello-span {
+    font-size: 19px;
+    color: #00bcd4;
+    font-weight: 500;
   }
 }

@@ -3,14 +3,31 @@
   width: 100%;
 }
 .projects-title {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-  margin: 10px;
-  width: 60%;
+  margin: 1% 1% 1% 2%;
+  width: 100vw;
   color: #001427;
+  font-weight: 200;
 }
 .projects-title h2 {
+  font-weight: 400;
+  color: #00bcd4;
+}
+.element-h2-span,
+.element-p-span {
+  opacity: 0.4;
+}
+.first-intro-paragraph {
+  margin: 1% 50% 1% 1%;
+}
+.second-intro-paragraph {
+  margin: 1% 0 1% 50%;
+}
+.third-intro-paragraph {
   font-weight: 500;
+  color: #00bcd4;
 }
 .hr-title {
   width: 15%;

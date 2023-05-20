@@ -1,37 +1,35 @@
 import MenuButton from "../MenuButton";
 import MenuSidebar from "../MenuSidebar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./AboutMe.css";
-import useWindowsResize from "../../useWindowResize";
 
 export default function AboutMe() {
   const [active, setActive] = useState(false);
+  const [activPanelOne, setActivePanelOne] = useState(true);
+  const [activPanelTwo, setActivePanelTwo] = useState(false);
+  const [activPanelThree, setActivePanelThree] = useState(false);
+  const [activPanelFour, setActivePanelFour] = useState(false);
 
-  const panels = document.querySelectorAll(".panel");
-  panels.forEach((panel) => {
-    panel.addEventListener("click", () => {
-      removeActiveClasses();
-      panel.classList.add("active");
-    });
-  });
-  const removeActiveClasses = () => {
-    panels.forEach((panel) => {
-      panel.classList.remove("active");
-    });
-  };
   return (
     <div>
       <main className="aboutme-container">
         <article className="intro-about-me">
           <p>
             {`<h3>`}
-            <span>Hello there</span>, this is my short story. I hope you'll
-            enyoj it and that it will give you an idea about my background and
-            who I am as a person.{`</h3>`}
+            <span className="hello-span">Hello there</span>, this is my short
+            story. I hope you'll enyoj it.{`</h3>`}
           </p>
         </article>
         <article className="cards-container">
-          <div className="panel active">
+          <div
+            className={activPanelOne ? "panel active" : "panel"}
+            onClick={() => {
+              setActivePanelTwo(false);
+              setActivePanelFour(false);
+              setActivePanelThree(false);
+              setActivePanelOne(true);
+            }}
+          >
             <h3>Introduction</h3>
             <hr className="hr-section-title-aboutme" />
             <div className="p-scroll">
@@ -45,7 +43,15 @@ export default function AboutMe() {
               </p>
             </div>
           </div>
-          <div className="panel">
+          <div
+            className={activPanelTwo ? "panel active" : "panel"}
+            onClick={() => {
+              setActivePanelTwo(true);
+              setActivePanelFour(false);
+              setActivePanelThree(false);
+              setActivePanelOne(false);
+            }}
+          >
             <h3>Professional Background</h3>
             <hr className="hr-section-title-aboutme" />
             <div className="p-scroll">
@@ -63,7 +69,15 @@ export default function AboutMe() {
               </p>
             </div>
           </div>
-          <div className="panel">
+          <div
+            className={activPanelThree ? "panel active" : "panel"}
+            onClick={() => {
+              setActivePanelTwo(false);
+              setActivePanelFour(false);
+              setActivePanelThree(true);
+              setActivePanelOne(false);
+            }}
+          >
             <h3>Skills and Hobbies</h3>
             <hr className="hr-section-title-aboutme" />
             <div className="p-scroll">
@@ -86,7 +100,15 @@ export default function AboutMe() {
               </p>
             </div>
           </div>
-          <div className="panel">
+          <div
+            className={activPanelFour ? "panel active" : "panel"}
+            onClick={() => {
+              setActivePanelTwo(false);
+              setActivePanelFour(true);
+              setActivePanelThree(false);
+              setActivePanelOne(false);
+            }}
+          >
             <h3>Conclusion</h3>
             <hr className="hr-section-title-aboutme" />
             <div className="p-scroll">
