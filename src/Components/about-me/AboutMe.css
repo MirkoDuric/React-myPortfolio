@@ -1,66 +1,65 @@
-@media (min-width: 200px) and (min-height: 240px) {
-  .aboutme-container {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-  }
-  .cards-container {
-    display: flex;
-    flex-direction: column;
-    width: 80vw;
-    height: 90vh;
-  }
-  .panel {
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 14vh;
-    color: black;
-    cursor: pointer;
-    margin: 10px;
-    position: relative;
-    transition: 0.7s ease-in;
-    overflow-y: hidden;
-    font-weight: 300;
-  }
-  .panel h3 {
-    font-weight: 500;
-  }
-  .panel.active {
-    height: 80vh;
-    padding: 5px;
-    border-radius: 5%;
-    font-size: 14px;
-  }
-  .panel.active .p-scroll {
-    overflow: scroll;
-    padding: 5px;
-    height: 70%;
-  }
-  .panel.active h3 {
-    font-size: 17px;
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
-  }
-  .hr-section-title-aboutme {
-    margin-bottom: 50px;
-  }
-  .intro-about-me {
-    font-size: 13px;
-    width: 70%;
-    margin-right: 20%;
-    font-weight: 300;
-  }
-  .hello-span {
-    font-size: 17px;
-    color: #00bcd4;
-    font-weight: 500;
-  }
+.aboutme-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
 }
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 90vh;
+}
+.panel {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 14vh;
+  color: black;
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  transition: 0.7s ease-in;
+  overflow-y: hidden;
+  font-weight: 300;
+}
+.panel h3 {
+  font-weight: 500;
+}
+.panel.active {
+  height: 80vh;
+  padding: 5px;
+  border-radius: 5%;
+  font-size: 14px;
+}
+.panel.active .p-scroll {
+  overflow: scroll;
+  padding: 5px;
+  height: 70%;
+}
+.panel.active h3 {
+  font-size: 17px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+.hr-section-title-aboutme {
+  margin-bottom: 50px;
+}
+.intro-about-me {
+  font-size: 15px;
+  width: 70%;
+  margin-right: 20%;
+  font-weight: 200;
+}
+.hello-span {
+  font-size: 17px;
+  color: #00bcd4;
+  font-weight: 500;
+}
+
 @media (min-width: 420px) {
   .hr-section-title-aboutme {
     margin-bottom: 20px;

@@ -33,67 +33,81 @@ export default function ContactForm() {
 
   return (
     <section className="contact">
-      <form ref={form} onSubmit={sendEmail} className="contactForm">
-        <div className="row">
-          <div className="col50">
-            <input
-              type="text"
-              name="First_name"
-              placeholder="First Name"
-              required
-            ></input>
-          </div>
-          <div className="col50">
-            <input
-              type="text"
-              name="Last_name"
-              placeholder="Last Name"
-              required
-            ></input>
-          </div>
+      <div className="scroll-layout">
+        <div className="contact-intro">
+          <h2>
+            <span className="element-h2-span">{"<h2>"}</span>Contact me
+            <span className="element-h2-span">{"</h2>"}</span>
+          </h2>
+          <p className="first-intro-paragraph">
+            <span className="element-p-span">{"<p>"}</span>If you like what you
+            saw, or you would like to have a chat with me feel free to contact
+            me via E-mail.<span className="element-p-span">{"<p>"}</span>
+          </p>
         </div>
-        <div className="row">
-          <div className="col50">
-            <input
-              type="text"
-              name="email"
-              placeholder="Email"
-              required
-            ></input>
+        <form ref={form} onSubmit={sendEmail} className="contactForm">
+          <div className="row">
+            <div className="col50">
+              <input
+                type="text"
+                name="First_name"
+                placeholder="First Name"
+                required
+              ></input>
+            </div>
+            <div className="col50">
+              <input
+                type="text"
+                name="Last_name"
+                placeholder="Last Name"
+                required
+              ></input>
+            </div>
           </div>
-          <div className="col50">
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone (optional)"
-            ></input>
+          <div className="row">
+            <div className="col50">
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                required
+              ></input>
+            </div>
+            <div className="col50">
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone (optional)"
+              ></input>
+            </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col100">
-            <textarea
-              type="text"
-              name="message"
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="Message"
-              required
-            ></textarea>
+          <div className="row">
+            <div className="col100">
+              <textarea
+                type="text"
+                name="message"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Message"
+                required
+              ></textarea>
+            </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col100">
-            <input type="submit" value="Send" />
+          <div className="row">
+            <div className="col100">
+              <input type="submit" value="Send" />
+            </div>
           </div>
-        </div>
-      </form>
-      <MenuButton
-        activeTggle={(e) => {
-          return setActive(!active), e.target.classList.toggle("active");
-        }}
-      />
-      {active ? <MenuSidebar /> : null}
+        </form>
+
+        <MenuButton
+          activeTggle={(e) => {
+            return setActive(!active), e.target.classList.toggle("active");
+          }}
+        />
+        {active ? <MenuSidebar /> : null}
+      </div>
     </section>
   );
 }

@@ -165,9 +165,6 @@ hr {
     border-radius: 5px;
     margin: auto;
   }
-  .projects-title p {
-    display: none;
-  }
 }
 @media (max-width: 347px) {
   .card:hover img {

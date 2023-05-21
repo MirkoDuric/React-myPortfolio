@@ -1,5 +1,7 @@
 .experties-container {
-  height: 100vh;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 10px;
 }
 .skills-container {
   height: 100%;
@@ -34,13 +36,18 @@
 
 .experties p {
   color: #001427;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .skill-title h2 {
+  color: #00bcd4;
+  font-size: 17px;
+  font-weight: 400;
+}
+.skill-title p {
   color: #001427;
-  font-size: 25px;
-  font-weight: 500;
+  font-weight: 200;
+  font-size: 13px;
 }
 .hr-section-title-skills {
   padding: 0;
@@ -53,11 +60,12 @@
 }
 .skill-carousel {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  height: 75%;
-  width: 60%;
+  height: 70%;
+  width: 62%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  margin-top: 10px;
 }
 .carousel-card-container {
   display: flex;
@@ -65,7 +73,7 @@
 }
 .skill-carousel .skill-card {
   width: 60vw;
-  height: 69vh;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,13 +86,14 @@
   width: inherit;
   height: inherit;
   padding: 5%;
+  font-weight: 200;
   overflow-y: scroll;
-  font-weight: 300;
+  font-size: 13px;
 }
 .buttons-container {
   display: flex;
   justify-content: space-between;
-  height: 6vh;
+  height: 40px;
   width: 100%;
 }
 .buttons-container .btn {
@@ -103,7 +112,7 @@
   outline: none;
 }
 
-@media (min-width: 1024px) and (min-height: 560px) {
+@media (min-width: 1024px) {
   .swiper {
     width: 100%;
     padding-top: 60px;
@@ -111,25 +120,28 @@
     display: flex;
     flex-direction: column;
     color: #fff;
+    min-height: 400px;
   }
 
   .swiper-slide {
     background-color: #fff;
     color: #001427;
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
     background-position: center;
     background-size: cover;
     padding: 15px;
     width: 60vh;
-    height: 60vh;
+    min-height: 400px;
     border-radius: 0px;
     filter: blur(1px);
     font-size: 18px;
-    border: 1px #00bcd4 solid;
+    border: 1px rgba(0, 0, 0, 0.2) solid;
+    overflow-y: scroll;
   }
   .swiper-slide-active {
     filter: blur(0);
+    min-height: 400px;
   }
   .swiper-slide p {
     padding: 10px;

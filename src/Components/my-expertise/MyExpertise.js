@@ -107,8 +107,22 @@ export default function MyExpertise() {
     <div className="experties-container">
       <div className="skills-container">
         <div className="skill-title">
-          <h2>My Skills</h2>
-          <hr className="hr-section-title-skills" />
+          <h2>
+            <span className="element-h2-span">{"<h2>"}</span>My Skills
+            <span className="element-h2-span">{"</h2>"}</span>
+          </h2>
+          <p className="first-intro-paragraph">
+            <span className="element-p-span">{"<p>"}</span>
+            These are some of the skills that I posses. I continued to work on
+            it day by day after my bootcamp.
+            <span className="element-p-span"> {"</p>"}</span>
+          </p>
+          <p className="second-intro-paragraph">
+            <span className="element-p-span">{"<p>"}</span>I can't wait to get
+            my first job or internship so that I can fully focus on coding,
+            learning new technologies and improving the existing ones.
+            <span className="element-p-span"> {"</p>"}</span>
+          </p>
         </div>
         {width > 1024 ? (
           <Swiper
