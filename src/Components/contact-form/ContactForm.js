@@ -100,14 +100,13 @@ export default function ContactForm() {
             </div>
           </div>
         </form>
-
-        <MenuButton
-          activeTggle={(e) => {
-            return setActive(!active), e.target.classList.toggle("active");
-          }}
-        />
-        {active ? <MenuSidebar /> : null}
       </div>
+      <MenuButton
+        activeTggle={(e) => {
+          return setActive(!active), e.target.classList.toggle("active");
+        }}
+      />
+      {active ? <MenuSidebar /> : null}
     </section>
   );
 }

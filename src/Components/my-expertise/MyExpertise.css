@@ -1,7 +1,8 @@
 .experties-container {
-  height: 100%;
+  min-height: 100vh;
   overflow-y: scroll;
   padding: 10px;
+  background: url("../img/background.jpg");
 }
 .skills-container {
   height: 100%;
@@ -41,13 +42,18 @@
 
 .skill-title h2 {
   color: #00bcd4;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 400;
+  background-color: #fff;
+  opacity: 0.8;
+  width: fit-content;
 }
 .skill-title p {
   color: #001427;
   font-weight: 200;
-  font-size: 13px;
+  font-size: 14px;
+  background-color: #fff;
+  opacity: 0.8;
 }
 .hr-section-title-skills {
   padding: 0;
@@ -81,6 +87,7 @@
   text-align: center;
   gap: 20px;
   padding: 10%;
+  background-color: #fff;
 }
 .skill-card p {
   width: inherit;
