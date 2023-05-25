@@ -9,7 +9,9 @@ export default function ContactForm() {
   const [active, setActive] = useState(false);
 
   const form = useRef();
-
+  const successAlert = () => {
+    alert("Email sucessfuly sent!");
+  };
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -22,6 +24,7 @@ export default function ContactForm() {
       )
       .then(
         (result) => {
+          successAlert();
           console.log(result.text);
           e.target.reset();
         },
