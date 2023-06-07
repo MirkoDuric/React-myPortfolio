@@ -8,9 +8,11 @@ export default function ProjectCard(props) {
         <h3>{props.projectName}</h3>
         <hr />
         <p>{props.projectDescription}</p>
-        <Link to={"/"} className="project-btn">
-          Take a look
-        </Link>
+        <button className="project-btn">
+          <a href={props.projectLink} target="_blank">
+            Take a look
+          </a>
+        </button>
       </div>
       <img src={props.projectImg}></img>
     </div>

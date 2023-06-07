@@ -23,10 +23,13 @@
   margin: 10px;
   position: relative;
   transition: 0.7s ease-in;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .panel h3 {
   font-weight: 500;
+}
+.panel img {
+  display: none;
 }
 .panel p {
   display: none;
@@ -37,21 +40,57 @@
   border-radius: 5%;
   font-size: 14px;
   background-color: #fff;
-  opacity: 0.8;
+  opacity: 0.9;
+  text-align: center;
+  padding: 15px;
 }
-.panel.active p {
+
+.panel.active p,
+img {
   display: block;
   font-weight: 300;
+  padding: 30px;
+}
+.panel.active img {
+  height: 100%;
+  display: block;
 }
 .panel.active .p-scroll {
   overflow: scroll;
   padding: 5px;
-  height: 70%;
+  height: 80%;
 }
 .panel.active h3 {
   font-size: 17px;
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
+}
+.intro-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+.aboutme-img-one {
+  width: 50%;
+}
+.aboutme-img-two {
+  max-height: 450px;
+}
+.intro-div p {
+  align-self: center;
+  text-align: left;
+}
+.introducion-div-two {
+  display: flex;
+}
+.introducion-div-two {
+  text-align: left;
+}
+.panel.active .hr-section-title-aboutme {
+  width: 100%;
 }
 .hr-section-title-aboutme {
   margin-bottom: 50px;
@@ -133,6 +172,9 @@
     height: 20vh;
     width: 45%;
     font-size: 15px;
+  }
+  .intro-div {
+    flex-direction: row;
   }
   .hello-span {
     font-size: 19px;

@@ -12,21 +12,16 @@ export default function MyProjects() {
       projectName: "ToDo List",
       projectDescription:
         "This was my first biger project. I must say that this was one of the most interesting projects to work on. It's plain JS, with no DB. I learned a lot during this project and really enjoyed to work in this team! Our goal was to create ToDo List, we also created some login form, but the user would only be saved in a objects array and would disapier once the page is reloaded.",
-      projectImg: require("../img/myportrait.jpg"),
+      projectImg: require("../img/projects_tn/ToDoListProject.png"),
+      projectLink: "https://mirkoduric.github.io/ToDoList-JS/",
     },
     {
       id: 2,
       projectName: "RecipesInc",
       projectDescription:
         "This project was my first DB project. I used React, PostgreQL as DB and plain CSS. Project shows 3 dishes from three diferent cousines. Preparation and ingredients. Main goal of this project was creating my own server and connecting my DB with my front end. Also learning how to work with realtional DB. Take a look, you might as well get the idea on what to cook this week!! ",
-      projectImg: require("../img/myportrait.jpg"),
-    },
-    {
-      id: 3,
-      projectName: "Restourants in Köln",
-      projectDescription:
-        "This project was a group project, and our goal was to use server created by one of us and to practice API cals in our front end. We decided to place couple of restaurants from Köln in our DB, and to get info about them on our front end. The project was done in the phase of our Bootcamp where we were learning API cals. erver and DB were done by our more experienced cloegue. ",
-      projectImg: require("../img/myportrait.jpg"),
+      projectImg: require("../img/projects_tn/RecipesInc-Project.png"),
+      projectLink: "https://recipeinc.onrender.com",
     },
     {
       id: 4,
@@ -40,13 +35,14 @@ export default function MyProjects() {
       projectName: "What's my IP adress",
       projectDescription:
         "Here I am using two diferent open API's. This way I'm taking the IP adress of the person who is using the link, and based on that IP address locating them and presenting some basic data. Location, time, coutnry flag, and their provider. It's also one of the projects where we learned how to use API and work with data that we get.",
-      projectImg: require("../img/myportrait.jpg"),
+      projectImg: require("../img/projects_tn/What's-your-IP-project.png"),
+      projectLink: "https://mirkoduric.github.io/What-s-my-IP/",
     },
     {
       id: 6,
       projectName: "Gig guide",
       projectDescription:
-        "Gig Guide was a final project of my Bootcamp. Idea behind this project is tracking music events in your hometown. We used open API from Ticketmaster present more popular artists and their events. But also we created the option to sign up and create your own events if your an artist. This way local bands would be able to present their gigs, and we would have an easy way to get info about cool bar gigs to visit! ",
+        "Gig Guide was a final project of my Bootcamp. Idea behind this project is tracking music events in your hometown. We used open API from Ticketmaster to present more popular artists. But also we created the option to create your own events if your an artist. This way local bands would be able to present their gigs, and we would have an easy way to get info about cool bar gigs to visit! ",
       projectImg: require("../img/myportrait.jpg"),
     },
   ];
@@ -93,6 +89,7 @@ export default function MyProjects() {
               projectName={project.projectName}
               projectDescription={project.projectDescription}
               projectImg={project.projectImg}
+              projectLink={project.projectLink}
             />
           );
         })}

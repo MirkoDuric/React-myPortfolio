@@ -143,6 +143,12 @@ hr {
   display: inline-block;
   text-decoration: none;
   font-weight: 700;
+  border: none;
+  margin-top: 10px;
+}
+.project-btn a {
+  text-decoration: none;
+  color: #fff;
 }
 .project-btn:hover {
   cursor: pointer;

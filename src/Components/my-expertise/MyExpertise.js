@@ -27,12 +27,8 @@ export default function MyExpertise() {
     {
       id: 0,
       icon: <FaHtml5 className="icon html" />,
-      description: `As a junior developer, I have a solid foundation in HTML. I have a
-  good understanding of HTML syntax, semantics, and best practices for
-  creating web pages. I can write well-structured HTML code that is
-  accessible and semantically meaningful. I am also familiar with
-  using HTML5 tags and features, as well as integrating HTML with
-  other front-end and back-end technologies.`,
+      description: `As a junior developer, I have a strong foundation in HTML. I specialize in creating well-structured and visually appealing web pages. My expertise extends to integrating HTML with various front-end and back-end technologies, including HTML5 features.
+      Driven by a passion for continuous learning, I eagerly embrace new challenges in the ever-evolving field of web development. HTML serves as my artistic canvas, allowing me to unleash creativity and deliver immersive user experiences`,
     },
     {
       id: 0,
@@ -49,26 +45,13 @@ export default function MyExpertise() {
     {
       id: 1,
       icon: <FaJs className="icon js" />,
-      description: `I have a proficient knowledge of JavaScript and its capabilities in
-      creating dynamic and interactive web pages. I am familiar with
-      JavaScript syntax, data types, and control structures, as well as
-      object-oriented programming concepts. I can use JavaScript to
-      manipulate the Document Object Model (DOM) to create dynamic effects
-      and behaviors on web pages. I am continuously improving my knowledge
-      of JavaScript and staying up-to-date with the latest trends and best
-      practices in the language.`,
+      description: `With a proficient knowledge of JavaScript, I bring web pages to life, infusing them with dynamic and interactive elements. I am well-versed in JavaScript syntax, data types, control structures, and object-oriented programming concepts. Leveraging the power of the Document Object Model (DOM), I create captivating effects and behaviors. Continuously improving my skills, I trying to stay updated with the latest trends and best practices in JavaScript.`,
     },
     {
       id: 2,
       icon: <FaReact className="icon react" />,
-      description: `I have a solid understanding of React and its capabilities in
-      building dynamic and interactive user interfaces. I am familiar with
-      React components, JSX syntax, and state management using props and
-      hooks. I can use React to create reusable and scalable components
-      that can be combined to create complex user interfaces.
-      Additionally, I am familiar with React Router for creating
-      multi-page applications, and I have experience working with APIs and
-      making asynchronous requests using Axios.`,
+      description: `I have a strong understanding of React, the driving force behind dynamic and interactive user interfaces. With expertise in React components, JSX syntax, and effective state management using props and hooks, I excel at creating scalable and reusable components that seamlessly combine to build intricate user interfaces. I also bring experience in utilizing React Router for multi-page applications and working with APIs, making asynchronous requests using Axios.
+      In addition to my React skills, I've embarked on an exciting journey of learning TypeScript. `,
     },
     {
       id: 3,
